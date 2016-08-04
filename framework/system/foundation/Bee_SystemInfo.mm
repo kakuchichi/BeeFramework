@@ -320,6 +320,39 @@ static const char * __jb_app = NULL;
 #endif	// #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 }
 
++ (BOOL)isPhoneRetina5
+{
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+    if ( [self isDevicePad] )
+    {
+        return NO;
+    }
+    else
+    {
+        return [BeeSystemInfo isScreenSize:CGSizeMake(750, 1334)];
+    }
+#else	// #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+    return NO;
+#endif	// #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+}
+
+
++ (BOOL)isPhoneRetina6
+{
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+    if ( [self isDevicePad] )
+    {
+        return NO;
+    }
+    else
+    {
+        return [BeeSystemInfo isScreenSize:CGSizeMake(1242, 2208)];
+    }
+#else	// #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+    return NO;
+#endif	// #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+}
+
 + (BOOL)isPad
 {
 #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)

@@ -116,6 +116,8 @@ AS_SINGLETON( BeeSystemInfo )
 + (BOOL)isPhone35;
 + (BOOL)isPhoneRetina35;
 + (BOOL)isPhoneRetina4;
++ (BOOL)isPhoneRetina5;
++ (BOOL)isPhoneRetina6;
 + (BOOL)isPad;
 + (BOOL)isPadRetina;
 + (BOOL)isScreenSize:(CGSize)size;
